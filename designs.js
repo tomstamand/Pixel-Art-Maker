@@ -1,7 +1,3 @@
-// Select color input
-// Select size input
-
-// When size is submitted by the user, call makeGrid()
 const color = document.querySelector('#colorPicker');
 const canvas = document.querySelector('#pixelCanvas');
 const sizePicker = document.querySelector('#sizePicker');
@@ -18,7 +14,12 @@ sizePicker.addEventListener('submit', (e) => {
     canvas.firstElementChild.remove();
     makeGrid(height, width);
 });
-
+/**
+ * @function makeGrid 
+ * @param   {number} width     the number of columns in the table
+ * @param   {number} height    the number of rows in the table
+ * @description Takes 2 numbers and creates an HTML table
+ */
 function makeGrid(high, wide) {
     for (let h = 0; h < high; h++) {
         let col = canvas.insertRow(h);
